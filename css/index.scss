@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+$FontPoppins: 'Poppins', sans-serif;
+$Red: hsl(0, 100%, 74%);
+$Green: hsl(154, 59%, 51%);
+$Blue: hsl(248, 32%, 49%);
+$DarkBlue: hsl(249, 10%, 26%);
+$GrayishBlue: hsl(246, 25%, 77%);
+
+html {
+    font-size: 62.5%;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+main {
+    font-size: 1.5rem;
+    background-color: $Red;
+    background-image: url('../images/bg-intro-mobile.png');
+    background-size: cover;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: max-content max-content;
+    gap: 4em;
+    position: relative;
+    .main__data {
+        text-align: center;
+        color: #fff;
+        font-family: $FontPoppins;
+        max-width: 500px;
+        margin: 0 auto;
+        h1 {
+            font-size: 2.7rem;
+            line-height: 1.2;
+            padding: 3em 0 1em;
+            font-weight: 700;
+        }
+        p {
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+    }
+    .main__form {
+        font-family: $FontPoppins;
+        .form__try {
+            text-align: center;
+            font-size: 1.5rem;
+            background-color: $Blue;
+            padding: 1em 2em;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            margin-bottom: 1.5em;
+            border-radius: 10px;
+            box-shadow: 0px 7px 0px -1px rgba(0,0,0,0.3);
+            p {
+                font-size: 1.5rem;
+                color: $GrayishBlue;
+                a {
+                    color: #fff;
+                    font-weight: 500;
+                    text-decoration: none;
+                }
+            }
+        }
+        form {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+            padding: 1.5em;
+            margin-bottom: 5em;
+
+            .form__container {
+                position: relative;
+                margin-bottom: 1em;
+                .form-input {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    padding: .8em .8em .5em;
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    border: 1px solid $GrayishBlue;
+                    border-radius: 5px;
+                }
+                .form-img {
+                    position: absolute;
+                    right: 15px;
+                    top: 12px;
+                    width: 20px;
+                    display: none;
+                }
+                .form-img-show {
+                    display: block;
+                }
+                label {
+                    display: block;
+                    text-align: end;
+                    font-size: 1.1rem;
+                    padding: .2em 0;
+                    font-style: italic;
+                    color: $Red;
+                    font-weight: 500;
+                    display: none;
+                }
+                .form-label-show {
+                    display: block;
+                }
+            }
+            .form-submit {
+                width: 100%;
+                background-color: rgba($Green, .9);
+                border: none;
+                padding: .8em;
+                border-radius: 5px;
+                box-shadow: 0px 5px 0px 0px $Green;
+                color: #fff;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                font-weight: 600;
+                margin: .5em 0 1em;
+                cursor: pointer;
+                transition: background-color .3s, box-shadow .3s;
+                &:hover {
+                    background-color: rgba($Green, .6);
+                    box-shadow: 0px 5px 0px 0px rgba($Green, .9);
+                }
+            }
+            .form-cta {
+                font-size: 1.2rem;
+                color: $GrayishBlue;
+                font-weight: 400;
+                text-align: center;
+                a {
+                    color: $Red;
+                    font-weight: 600;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .main__autor {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        p {
+            text-align: end;
+            font-family: $FontPoppins;
+            font-size: 1.1rem;
+            color: #fff;
+            a {
+                text-decoration: none;
+                color: $Blue;
+                font-weight: 600;
+            }
+        } 
+
+    }
+}
+
+@media screen and (min-width: 500px){
+    main {
+        background-image: url('../images/bg-intro-desktop.png');
+    }
+}
+@media screen and (min-width: 800px) {
+    main {
+        font-size: 1.7rem;
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        align-items: center;
+        .main__data {
+            text-align: start;
+            color: #fff;
+            font-family: $FontPoppins;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            h1 {
+                font-size: 2.9rem;
+                line-height: 1.2;
+                padding: 0;
+                padding-bottom: 1em;
+                font-weight: 700;
+            }
+            p {
+                font-weight: 400;
+                font-size: 1.7rem;
+            }
+        }
+        .main__form {
+            .form__try {
+                font-size: 1.7rem;
+                p {
+                    font-size: 1.7rem;
+                }
+            }
+            form {
+                margin-bottom: 0;
+                .form__container {
+                    .form-input {
+                        font-size: 1.7rem;
+                    }
+                    .form-img {
+                        top: 15px;
+                    }
+                    label {
+                        font-size: 1.2rem;
+                    }
+                }
+                .form-submit {
+                    font-size: 1.7rem;
+                }
+                .form-cta {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
